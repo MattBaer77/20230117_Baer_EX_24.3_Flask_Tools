@@ -57,7 +57,7 @@ def answer():
 
     current_user_question_index += 1
 
-    if current_user_question_index + 1 > len(surveys.satisfaction_survey.questions):
+    if current_user_question_index + 1 >= len(surveys.satisfaction_survey.questions):
         return redirect('/thankyou')
 
     return redirect(f'/questions/{current_user_question_index}')
